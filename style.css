@@ -1,0 +1,120 @@
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial, sans-serif;
+
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    color:white;
+    overflow:hidden;
+}
+
+.container{
+    text-align:center;
+    max-width:500px;
+    animation: fadeIn 2s ease;
+}
+
+h1{
+    font-size:42px;
+}
+
+h2{
+    margin-top:30px;
+}
+
+.buttons{
+    margin-top:30px;
+}
+
+button{
+    padding:15px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    margin:10px;
+    transition: transform 0.2s;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+.yes{
+    background:#4CAF50;
+    color:white;
+}
+
+.no{
+    background:#ff4d4d;
+    color:white;
+}
+
+/* animação de entrada */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* corações */
+
+.heart{
+    position:absolute;
+    color:white;
+    font-size:20px;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-100vh);
+        opacity:0;
+    }
+}
+
+/* fundo estrelado */
+
+#stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{
+        opacity:0.2;
+        transform:scale(1);
+    }
+    to{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
